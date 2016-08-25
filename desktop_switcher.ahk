@@ -1,5 +1,10 @@
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
 ; Globals
-DesktopCount = 2        ; Windows starts with 2 desktops at boot
+DesktopCount = 1        ; Windows starts with 2 desktops at boot
 CurrentDesktop = 1      ; Desktop count is 1-indexed (Microsoft numbers them this way)
 
 ;
@@ -133,35 +138,13 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 
 ; User config!
 ; This section binds the key combo to the switch/create/delete actions
-CapsLock & 1::switchDesktopByNumber(1)
-CapsLock & 2::switchDesktopByNumber(2)
-CapsLock & 3::switchDesktopByNumber(3)
-CapsLock & 4::switchDesktopByNumber(4)
-CapsLock & 5::switchDesktopByNumber(5)
-CapsLock & 6::switchDesktopByNumber(6)
-CapsLock & 7::switchDesktopByNumber(7)
-CapsLock & 8::switchDesktopByNumber(8)
-CapsLock & 9::switchDesktopByNumber(9)
-CapsLock & n::switchDesktopByNumber(CurrentDesktop + 1)
-CapsLock & p::switchDesktopByNumber(CurrentDesktop - 1)
-CapsLock & s::switchDesktopByNumber(CurrentDesktop + 1)
-CapsLock & a::switchDesktopByNumber(CurrentDesktop - 1)
-CapsLock & c::createVirtualDesktop()
-CapsLock & d::deleteVirtualDesktop()
-
-; Alternate keys for this config. Adding these because DragonFly (python) doesn't send CapsLock correctly.
-^!1::switchDesktopByNumber(1)
-^!2::switchDesktopByNumber(2)
-^!3::switchDesktopByNumber(3)
-^!4::switchDesktopByNumber(4)
-^!5::switchDesktopByNumber(5)
-^!6::switchDesktopByNumber(6)
-^!7::switchDesktopByNumber(7)
-^!8::switchDesktopByNumber(8)
-^!9::switchDesktopByNumber(9)
-^!n::switchDesktopByNumber(CurrentDesktop + 1)
-^!p::switchDesktopByNumber(CurrentDesktop - 1)
-^!s::switchDesktopByNumber(CurrentDesktop + 1)
-^!a::switchDesktopByNumber(CurrentDesktop - 1)
-^!c::createVirtualDesktop()
-^!d::deleteVirtualDesktop()
+CapsLock & q::switchDesktopByNumber(1)
+CapsLock & w::switchDesktopByNumber(2)
+CapsLock & e::switchDesktopByNumber(3)
+CapsLock & r::switchDesktopByNumber(4)
+CapsLock & t::switchDesktopByNumber(5)
+CapsLock & a::switchDesktopByNumber(6)
+CapsLock & s::switchDesktopByNumber(7)
+CapsLock & d::switchDesktopByNumber(8)
+CapsLock & f::switchDesktopByNumber(9)
+CapsLock & g::switchDesktopByNumber(10)
